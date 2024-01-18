@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#score {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+#introduction {
+    color: #084be8;
+  width: 50%;
+  height: 150px;
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.8em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  transition: opacity 2s;
+}
+
+#restart {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  border-radius: 50%;
+  color: #a2c6d8;
+  background-color: #134cf7;
+  border: none;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: none;
+  cursor: pointer;
+}
+
+#perfect {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+#youtube,
+#youtube-card {
+  display: none;
+}
+
+@media (min-height: 425px) {
+  /** Youtube logo by https://codepen.io/alvaromontoro */
+  #youtube {
+    z-index: 2;
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-image: url('../assets/logo-franki.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    border-radius: 50% / 11%;
+    transform: scale(0.8);
+    transition: transform 0.5s;
+  }
+
+  #youtube:hover,
+  #youtube:focus { 
+    transform: scale(0.9);
+  }
+
+  #youtube::before { 
+    display: block;
+    position: absolute;
+    top: 7.5%;
+    left: -6%;
+    width: 112%;
+    height: 85%; 
+    border-radius: 9% / 50%;
+  }
+ 
+
+  #youtube span { 
+    font-size: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  #youtube:hover + #youtube-card { 
+    color: lightgoldenrodyellow;
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    padding: 25px 25px 25px 130px;
+    width: 300px;
+    background-color: #5710e3aa;
+  }
+}
